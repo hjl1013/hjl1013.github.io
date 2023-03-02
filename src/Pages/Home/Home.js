@@ -1,10 +1,13 @@
 import React from 'react'
+import SideBar from '../../common/SideBar/SideBar'
 import './Home.css'
 
 function Home() {
     return (
         <div className='home'>
-            Home
+            <div className='home__sideBar'>
+                <SideBar />
+            </div>
         </div>
     )
 }

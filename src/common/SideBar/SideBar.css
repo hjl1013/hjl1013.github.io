@@ -1,0 +1,42 @@
+.sideBar {
+    width: 200px;
+    border-right: solid 1px lightgray;
+    height: 100vh;
+}
+
+.sideBar__contents {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10vh;
+}
+
+.sideBar__content {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    padding: 14px;
+    margin: 10px;
+    align-items: center;
+}
+
+.sideBar__content > p {
+    color: lightgray;
+}
+
+.sideBar__content > .MuiSvgIcon-root {
+    color: lightgray;
+}
+
+.sideBar__content--active {
+    background-color: #ECECEC;
+    border-radius: 10px;
+}
+
+.sideBar__content--active > p {
+    color: black;
+}
+
+.sideBar__content--active > .MuiSvgIcon-root {
+    color: black;
+}
