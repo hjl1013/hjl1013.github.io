@@ -5,6 +5,7 @@ import './Home.css'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import CalculateIcon from '@mui/icons-material/Calculate';
+import ComputerIcon from '@mui/icons-material/Computer';
 import { Button } from '@mui/material';
 import TimelineItem from './components/TimelineItem';
 
@@ -53,13 +54,10 @@ function Home() {
                             <Button>All</Button>
                         </div>
                         <div className='home__achievementsFilter'>
-                            <Button>Olympiads</Button>
+                            <Button>Math</Button>
                         </div>
                         <div className='home__achievementsFilter'>
-                            <Button>AI</Button>
-                        </div>
-                        <div className='home__achievementsFilter'>
-                            <Button>Web</Button>
+                            <Button>CS</Button>
                         </div>
                     </div>
                     <div className='home__achievementsTimelineContainer'>
@@ -72,19 +70,19 @@ function Home() {
                                 <TimelineItem type='right' icon={<CalculateIcon />} iconColor='lightblue' text='Enter Seoul Science HighSchool'/>
                             </div>
                             <div className='home__timelineItem'>
-                                <TimelineItem type='left' icon={<CalculateIcon />} iconColor='lightgreen' text='Enter Seoul Science HighSchool'/>
+                                <TimelineItem type='left' icon={<ComputerIcon />} iconColor='lightgreen' text='Enter Seoul Science HighSchool'/>
                             </div>
                             <div className='home__timelineItem'>
                                 <TimelineItem type='right' icon={<CalculateIcon />} iconColor='lightblue' text='Enter Seoul Science HighSchool'/>
                             </div>
                             <div className='home__timelineItem'>
-                                <TimelineItem type='left' icon={<CalculateIcon />} iconColor='lightgreen' text='Enter Seoul Science HighSchool'/>
+                                <TimelineItem type='left' icon={<ComputerIcon />} iconColor='lightgreen' text='Enter Seoul Science HighSchool'/>
                             </div>
                             <div className='home__timelineItem'>
                                 <TimelineItem type='right' icon={<CalculateIcon />} iconColor='lightblue' text='Enter Seoul Science HighSchool'/>
                             </div>
                             <div className='home__timelineItem'>
-                                <TimelineItem type='left' icon={<CalculateIcon />} iconColor='lightgreen' text='Enter Seoul Science HighSchool'/>
+                                <TimelineItem type='left' icon={<ComputerIcon />} iconColor='lightgreen' text='Enter Seoul Science HighSchool'/>
                             </div>
                         </div>
                     </div>
