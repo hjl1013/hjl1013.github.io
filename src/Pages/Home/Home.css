@@ -1,0 +1,94 @@
+.home__sideBar {
+    position: fixed;
+}
+
+.home__body {
+    margin-left: 201px;
+    padding: 50px;
+}
+
+.home__profileInfo {
+    display: flex;
+    align-items: center;
+}
+
+.home__profileImageInfo > img {
+    object-fit: cover;
+    object-position: 0 10%;
+    width: 150px;
+    height: 150px;
+    border-radius: 999px;
+}
+
+.home__profileTextInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-left: 20px;
+}
+
+.home__profileAccounts {
+    display: flex;
+    align-items: center;
+}
+
+.home__profileAccounts > .MuiSvgIcon-root {
+    margin-right: 5px;
+}
+
+.home__sectionTitle {
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+
+.home__shortIntroduction > p {
+    margin-top: 10px;
+}
+
+.home__achievements {
+    display: flex;
+    flex-direction: column;
+}
+
+.home__achievementsFilters {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.home__achievementsFilter {
+    margin-right: 10px;
+}
+
+.home__achievementsFilter > button {
+    color: lightgray;
+}
+
+.home__achievementsFilter--active > button {
+    color: black;
+    background-color: #ECECEC;
+}
+
+.home__achievementsTimelineContainer {
+    height: 500px;
+    overflow: scroll;
+}
+
+.home__achievementsTimeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.home__achievementsTimelineCenterLine {
+    width: 2px;
+    height: 100%;
+    background-color: lightgray;
+    position: absolute;
+    justify-self: center;
+}
+
+.home__timelineItem {
+    z-index: 1;
+}

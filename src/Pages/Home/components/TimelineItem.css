@@ -1,0 +1,40 @@
+.timelineItem {
+    display: flex;
+}
+
+.timelineItem__left {
+    width: 300px;
+}
+
+.timelineItem__icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+}
+
+.timelineItem__icon > .MuiSvgIcon-root {
+    color: white;
+    transform: scale(1.5);
+}
+
+.timelineItem__icon > h3 {
+    color: white;
+}
+
+.timelineItem__right {
+    width: 300px;
+}
+
+.timelineItem__text > p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.timelineItem__line {
+    height: 2px;
+    background-color: lightgray;
+    margin-top: 34px;
+}

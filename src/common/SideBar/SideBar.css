@@ -18,6 +18,7 @@
     padding: 14px;
     margin: 10px;
     align-items: center;
+    cursor: pointer;
 }
 
 .sideBar__content > p {
