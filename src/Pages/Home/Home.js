@@ -13,7 +13,7 @@ function Home() {
     return (
         <div className='home'>
             <div className='home__sideBar'>
-                <SideBar />
+                <SideBar page='home'/>
             </div>
 
             <div className='home__body'>

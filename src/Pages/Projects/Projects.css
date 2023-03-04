@@ -1,0 +1,48 @@
+.projects__sideBar {
+    position: fixed;
+}
+
+.projects__body {
+    margin-left: 201px;
+    padding: 50px;
+}
+
+.projects__title {
+    margin-bottom: 30px;
+}
+
+.projects__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.projects__item {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 100ms ease-in;
+    cursor: pointer;
+}
+
+.projects__item:hover {
+    transform: scale(1.07);
+}
+
+.projects__item > img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    object-position: 0 0;
+    opacity: 0.2;
+}
+
+.projects__item > p {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    top: 20px;
+    left: 20px;
+}
