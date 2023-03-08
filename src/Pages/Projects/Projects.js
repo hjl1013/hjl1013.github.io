@@ -1,8 +1,34 @@
-import React from 'react'
+import { collection, getDocs } from 'firebase/firestore';
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 import SideBar from '../../common/SideBar/SideBar'
+import { dbService } from '../../fbase';
 import './Projects.css'
 
 function Projects() {
+    const [ projects, setProjects ] = useState([]);
+
+    const navigate = useNavigate();
+
+    const getProjects = async () => {
+        const querySnapshot = await getDocs(collection(dbService, "projects"));
+        const projectsTemp = [];
+
+        querySnapshot.forEach(doc => {
+            projectsTemp.push({
+                id: doc.id,
+                title: doc.data().title,
+                image: doc.data().titleImage
+            })
+        })
+
+        setProjects(projectsTemp);
+    }
+
+    useEffect(() => {
+        getProjects();
+    }, [])
+
     return (
         <div className='projects'>
             <div className='projects__sideBar'>
@@ -15,26 +41,16 @@ function Projects() {
                 </div>
 
                 <div className='projects__list'>
-                    <div className='projects__item'>
-                        <img src='http://fastmri.snu.ac.kr/2022maingr.png' alt='' />
-                        <p>SNU FastMRI</p>
-                    </div>
-                    <div className='projects__item'>
-                        <img src='http://fastmri.snu.ac.kr/2022maingr.png' alt='' />
-                        <p>SNU FastMRI</p>
-                    </div>
-                    <div className='projects__item'>
-                        <img src='http://fastmri.snu.ac.kr/2022maingr.png' alt='' />
-                        <p>SNU FastMRI</p>
-                    </div>
-                    <div className='projects__item'>
-                        <img src='http://fastmri.snu.ac.kr/2022maingr.png' alt='' />
-                        <p>SNU FastMRI</p>
-                    </div>
-                    <div className='projects__item'>
-                        <img src='http://fastmri.snu.ac.kr/2022maingr.png' alt='' />
-                        <p>SNU FastMRI</p>
-                    </div>
+                    {
+                        projects.map(project => {
+                            return (
+                                <div id={project.id} key={project.id} className='projects__item' onClick={e => navigate(`/projects/${e.target.id}`)}>
+                                    <img id={project.id} src={project.image} alt='' />
+                                    <p id={project.id}>{project.title}</p>
+                                </div>
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>

@@ -1,0 +1,24 @@
+.createProject__sideBar {
+    position: fixed;
+}
+
+.createProject__body {
+    margin-left: 201px;
+    padding: 50px;
+}
+
+.createProject__contentTitleImage {
+    flex-direction: column;
+}
+
+.createProject__contentTitleImage > img {
+    width: 300px;
+}
+
+.createProject__contentTags {
+    display: flex;
+}
+
+.createProject__contentTagButton--active > button {
+    background-color: black;
+}

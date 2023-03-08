@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import SideBar from '../../common/SideBar/SideBar'
 import './Home.css'
 
@@ -10,6 +10,10 @@ import { Button } from '@mui/material';
 import TimelineItem from './components/TimelineItem';
 
 function Home() {
+    const [ achievements, setAchievements ] = useState([]);
+
+    // useEffect
+
     return (
         <div className='home'>
             <div className='home__sideBar'>

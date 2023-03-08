@@ -1,0 +1,8 @@
+.project__sideBar {
+    position: fixed;
+}
+
+.project__body {
+    margin-left: 201px;
+    padding: 50px;
+}
