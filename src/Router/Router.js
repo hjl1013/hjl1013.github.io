@@ -14,7 +14,7 @@ function AppRouter() {
                 {/* main routes */}
                 <Route path='/' element={<Home />} />
                 <Route path='/projects' element={<Projects />} />
-                <Route path='/projects/:projectId' element={<Project />} />
+                <Route path='/project/:projectId' element={<Project />} />
 
                 {/* for creating, editing */}
                 <Route path='/create-project' element={<CreateProject />} />

@@ -85,11 +85,13 @@ function EditProject() {
         setTitleImage(docData.titleImage);
         setBodySave(docData.body);
         setBody(bodyTemp);
+
+        console.log('call')
     }
 
     useEffect(() => {
         getProjectInfo()
-    })
+    }, [])
 
     return (
         <div className='editProject'>

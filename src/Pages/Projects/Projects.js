@@ -27,7 +27,7 @@ function Projects() {
 
     useEffect(() => {
         getProjects();
-    })
+    }, [])
 
     return (
         <div className='projects'>
@@ -44,7 +44,7 @@ function Projects() {
                     {
                         projects.map(project => {
                             return (
-                                <div id={project.id} key={project.id} className='projects__item' onClick={e => navigate(`/projects/${e.target.id}`)}>
+                                <div id={project.id} key={project.id} className='projects__item' onClick={e => navigate(`/project/${e.target.id}`)}>
                                     <img id={project.id} src={project.image} alt='' />
                                     <p id={project.id}>{project.title}</p>
                                 </div>
