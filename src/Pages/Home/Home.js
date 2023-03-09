@@ -77,7 +77,7 @@ function Home() {
 
     useEffect(() => {
         getAchievements()
-    }, [])
+    }, [tag])
 
     return (
         <div className='home'>

@@ -22,3 +22,7 @@
 .createProject__contentTagButton--active > button {
     background-color: black;
 }
+
+.createProject__imagePreview > img {
+    width: 300px;
+}

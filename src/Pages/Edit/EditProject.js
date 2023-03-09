@@ -37,6 +37,8 @@ function EditProject() {
             }
         })
 
+        console.log(bodyTemp);
+
         setBody(bodyTemp);
         setBodySave(bodySaveTemp);
     }
@@ -85,8 +87,6 @@ function EditProject() {
         setTitleImage(docData.titleImage);
         setBodySave(docData.body);
         setBody(bodyTemp);
-
-        console.log('call')
     }
 
     useEffect(() => {
