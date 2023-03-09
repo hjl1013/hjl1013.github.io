@@ -1,0 +1,8 @@
+.createAchievement__sideBar {
+    position: fixed;
+}
+
+.createAchievement__body {
+    margin-left: 201px;
+    padding: 50px;
+}

@@ -6,13 +6,78 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import CalculateIcon from '@mui/icons-material/Calculate';
 import ComputerIcon from '@mui/icons-material/Computer';
+import StarIcon from '@mui/icons-material/Star';
 import { Button } from '@mui/material';
 import TimelineItem from './components/TimelineItem';
+import { collection, doc, getDocs, orderBy, query, where } from 'firebase/firestore';
+import { dbService } from '../../fbase';
+
+const tagList = {
+    math: {
+        icon: <CalculateIcon />,
+        color: 'lightblue'
+    },
+    cs: {
+        icon: <ComputerIcon />,
+        color: 'lightgreen'
+    },
+    other: {
+        icon: <StarIcon />,
+        color: 'orange'
+    }
+};
 
 function Home() {
-    const [ achievements, setAchievements ] = useState([]);
+    const [ tag, setTag ] = useState('');
+    const [ timeline, setTimeline ] = useState([]);
 
-    // useEffect
+    const getAchievements = async () => {
+        let querySnapshot;
+        if (!tag) {
+            querySnapshot = await getDocs(query(collection(dbService, "achievements"), orderBy("date")));
+        }
+        else {
+            querySnapshot = await getDocs(query(collection(dbService, "achievements"), where("tag", "==", tag), orderBy("date", "asc")));
+        }
+
+        const timelineTemp = [];
+        let year = 0;
+        let type = 'right';
+        let key = 0;
+        querySnapshot.forEach(doc => {
+            const date = new Date(doc.data().date.seconds * 1000)
+            const data = doc.data();
+
+            if (date.getFullYear() > year) {
+                year = date.getFullYear()
+                timelineTemp.push({
+                    key,
+                    tag: 'year',
+                    title: '',
+                    icon: <h3>{year}</h3>,
+                    color: 'lightgray'
+                })
+                key += 1;
+            }
+
+            timelineTemp.push({
+                key,
+                type: type,
+                title: data.title,
+                icon: tagList[data.tag].icon,
+                color: tagList[data.tag].color
+            })
+            key += 1;
+
+            type = (type === 'right') ? 'left': 'right';
+        })
+
+        setTimeline(timelineTemp);
+    }
+
+    useEffect(() => {
+        getAchievements()
+    })
 
     return (
         <div className='home'>
@@ -49,45 +114,36 @@ function Home() {
                 </div>
 
                 <div className='home__sectionTitle'>
-                    <h2>Achievements Timeline</h2>
+                    <h2>Timeline</h2>
                 </div>
 
                 <div className='home__achievements'>
                     <div className='home__achievementsFilters'>
-                        <div className='home__achievementsFilter home__achievementsFilter--active'>
-                            <Button>All</Button>
+                        <div className={`home__achievementsFilter ${ !tag && 'home__achievementsFilter--active'}`}>
+                            <Button onClick={() => setTag('')}>All</Button>
                         </div>
-                        <div className='home__achievementsFilter'>
-                            <Button>Math</Button>
+                        <div className={`home__achievementsFilter ${ tag === 'math' && 'home__achievementsFilter--active'}`}>
+                            <Button onClick={() => setTag('math')}>Math</Button>
                         </div>
-                        <div className='home__achievementsFilter'>
-                            <Button>CS</Button>
+                        <div className={`home__achievementsFilter ${ tag === 'cs' && 'home__achievementsFilter--active'}`}>
+                            <Button onClick={() => setTag('cs')}>CS</Button>
+                        </div>
+                        <div className={`home__achievementsFilter ${ tag === 'other' && 'home__achievementsFilter--active'}`}>
+                            <Button onClick={() => setTag('other')}>other</Button>
                         </div>
                     </div>
                     <div className='home__achievementsTimelineContainer'>
                         <div className='home__achievementsTimeline'>
                             <div className='home__achievementsTimelineCenterLine'></div>
-                            <div className='home__timelineItem'>
-                                <TimelineItem type='' icon={<h3>2019</h3>} iconColor='lightgray' text='Enter Seoul Science HighSchool'/>
-                            </div>
-                            <div className='home__timelineItem'>
-                                <TimelineItem type='right' icon={<CalculateIcon />} iconColor='lightblue' text='Enter Seoul Science HighSchool'/>
-                            </div>
-                            <div className='home__timelineItem'>
-                                <TimelineItem type='left' icon={<ComputerIcon />} iconColor='lightgreen' text='Enter Seoul Science HighSchool'/>
-                            </div>
-                            <div className='home__timelineItem'>
-                                <TimelineItem type='right' icon={<CalculateIcon />} iconColor='lightblue' text='Enter Seoul Science HighSchool'/>
-                            </div>
-                            <div className='home__timelineItem'>
-                                <TimelineItem type='left' icon={<ComputerIcon />} iconColor='lightgreen' text='Enter Seoul Science HighSchool'/>
-                            </div>
-                            <div className='home__timelineItem'>
-                                <TimelineItem type='right' icon={<CalculateIcon />} iconColor='lightblue' text='Enter Seoul Science HighSchool'/>
-                            </div>
-                            <div className='home__timelineItem'>
-                                <TimelineItem type='left' icon={<ComputerIcon />} iconColor='lightgreen' text='Enter Seoul Science HighSchool'/>
-                            </div>
+                            {
+                                timeline.map(({ key, type, icon, color, title }) => {
+                                    return (
+                                        <div key={key} className='home__timelineItem'>
+                                            <TimelineItem type={type} icon={icon} iconColor={color} text={title} />
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                 </div>

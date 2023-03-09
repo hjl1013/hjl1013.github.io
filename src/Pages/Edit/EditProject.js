@@ -89,7 +89,7 @@ function EditProject() {
 
     useEffect(() => {
         getProjectInfo()
-    }, [])
+    })
 
     return (
         <div className='editProject'>

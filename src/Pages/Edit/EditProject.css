@@ -1,38 +1,38 @@
-.edit__sideBar {
+.editProject__sideBar {
     position: fixed;
 }
 
-.edit__body {
+.editProject__body {
     margin-left: 201px;
     padding: 50px;
 }
 
-.edit__contentTitleImage {
+.editProject__contentTitleImage {
     flex-direction: column;
 }
 
-.edit__contentTitleImage > img {
+.editProject__contentTitleImage > img {
     width: 300px;
 }
 
-.edit__contentTags {
+.editProject__contentTags {
     display: flex;
 }
 
-.edit__contentTagButton--active > button {
+.editProject__contentTagButton--active > button {
     background-color: black;
 }
 
-.edit__contentPreviewTitle {
+.editProject__contentPreviewTitle {
     margin-bottom: 35px;
 }
 
-.edit__contentParagraph {
+.editProject__contentParagraph {
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.edit__contentParagraph > img {
+.editProject__contentParagraph > img {
     width: 100%;
     border-radius: 10px;
     box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.75);

@@ -27,7 +27,7 @@ function Projects() {
 
     useEffect(() => {
         getProjects();
-    }, [])
+    })
 
     return (
         <div className='projects'>
