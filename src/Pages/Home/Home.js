@@ -11,9 +11,9 @@ import SchoolIcon from '@mui/icons-material/School';
 import ScienceIcon from '@mui/icons-material/Science';
 import { Button } from '@mui/material';
 import TimelineItem from './components/TimelineItem';
-import { collection, doc, getDocs, orderBy, query, where } from 'firebase/firestore';
+import { collection, getDocs, orderBy, query, where } from 'firebase/firestore';
 import { dbService } from '../../fbase';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const tagList = {
     math: {
@@ -41,8 +41,6 @@ const tagList = {
 function Home() {
     const [ tag, setTag ] = useState('');
     const [ timeline, setTimeline ] = useState([]);
-
-    const navigate = useNavigate()
 
     const getAchievements = async () => {
         let querySnapshot;
