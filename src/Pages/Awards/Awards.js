@@ -1,8 +1,42 @@
-import React from 'react'
+import { collection, getDocs, orderBy, query } from 'firebase/firestore';
+import React, { useEffect, useState } from 'react'
 import SideBar from '../../common/SideBar/SideBar'
+import { dbService } from '../../fbase';
 import './Awards.css'
 
 function Awards() {
+    const [ awardList, setAwardList ] = useState([]);
+
+    const getAwards = async () => {
+        const querySnapshot = await getDocs(query(collection(dbService, "awards"), orderBy("date")));
+        const awardsTemp = {};
+
+        querySnapshot.forEach(doc => {
+            const { sectionTitle, title } = doc.data();
+            const date = new Date(doc.data().date.seconds * 1000)
+
+            if (sectionTitle in awardsTemp) {
+                awardsTemp[sectionTitle].push({
+                    id: doc.id,
+                    year: date.getFullYear(),
+                    title
+                });
+            } else {
+                awardsTemp[sectionTitle] = [{
+                    id: doc.id,
+                    year: date.getFullYear(),
+                    title
+                }];
+            }
+
+            setAwardList(awardsTemp);
+        })
+    }
+
+    useEffect(() => {
+        getAwards()
+    }, [])
+
     return (
         <div className='awards'>
             <div className='awards__sideBar'>
@@ -14,35 +48,29 @@ function Awards() {
                     <h1>Awards</h1>
                 </div>
 
-                <div className='awards__awardTitle'>
-                    <h3>Olympiad</h3>
-                </div>
+                {
+                    Object.keys(awardList).map(section => {
+                        const list = awardList[section];
 
-                <div className='awards__awardList'>
-                    <p>2015 Middle School Level KMO gold prize</p>
-                    <p>2015 Middle School Level KMO gold prize</p>
-                    <p>2015 Middle School Level KMO gold prize</p>
-                </div>
+                        return (
+                            <div key={section}>
+                                <div className='awards__awardTitle'>
+                                    <h3>{section}</h3>
+                                </div>
 
-                <div className='awards__awardTitle'>
-                    <h3>Olympiad</h3>
-                </div>
-
-                <div className='awards__awardList'>
-                    <p>2015 Middle School Level KMO gold prize</p>
-                    <p>2015 Middle School Level KMO gold prize</p>
-                    <p>2015 Middle School Level KMO gold prize</p>
-                </div>
-
-                <div className='awards__awardTitle'>
-                    <h3>Olympiad</h3>
-                </div>
-
-                <div className='awards__awardList'>
-                    <p>2015 Middle School Level KMO gold prize</p>
-                    <p>2015 Middle School Level KMO gold prize</p>
-                    <p>2015 Middle School Level KMO gold prize</p>
-                </div>
+                                {
+                                    list.map(award => {
+                                        return (
+                                            <div className='awards__award' key={award.id}>
+                                                <p>{award.year} {award.title}</p>
+                                            </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                        )
+                    })
+                }
             </div>
         </div>
     )

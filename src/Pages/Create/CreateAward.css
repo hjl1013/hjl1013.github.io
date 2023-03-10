@@ -1,3 +1,8 @@
 .createAward__sideBar {
     position: fixed;
 }
+
+.createAward__body {
+    margin-left: 201px;
+    padding: 50px;
+}

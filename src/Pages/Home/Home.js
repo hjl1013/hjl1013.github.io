@@ -8,6 +8,7 @@ import CalculateIcon from '@mui/icons-material/Calculate';
 import ComputerIcon from '@mui/icons-material/Computer';
 import StarIcon from '@mui/icons-material/Star';
 import SchoolIcon from '@mui/icons-material/School';
+import ScienceIcon from '@mui/icons-material/Science';
 import { Button } from '@mui/material';
 import TimelineItem from './components/TimelineItem';
 import { collection, doc, getDocs, orderBy, query, where } from 'firebase/firestore';
@@ -18,6 +19,10 @@ const tagList = {
     math: {
         icon: <CalculateIcon />,
         color: 'lightblue'
+    },
+    science: {
+        icon: <ScienceIcon />,
+        color: '#8458B3'
     },
     cs: {
         icon: <ComputerIcon />,
