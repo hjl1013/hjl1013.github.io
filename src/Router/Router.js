@@ -1,5 +1,6 @@
 import React from 'react'
 import { HashRouter, Route, Routes } from 'react-router-dom'
+import Awards from '../Pages/Awards/Awards'
 import CreateAchievement from '../Pages/Create/CreateAchievement'
 import CreateProject from '../Pages/Create/CreateProject'
 import EditProject from '../Pages/Edit/EditProject'
@@ -15,6 +16,7 @@ function AppRouter() {
                 <Route path='/' element={<Home />} />
                 <Route path='/projects' element={<Projects />} />
                 <Route path='/project/:projectId' element={<Project />} />
+                <Route path='/awards' element={<Awards />} />
 
                 {/* for creating, editing */}
                 <Route path='/create-project' element={<CreateProject />} />

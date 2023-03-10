@@ -1,0 +1,22 @@
+.awards__sideBar {
+    position: fixed;
+}
+
+.awards__body {
+    margin-left: 201px;
+    padding: 50px;
+}
+
+.awards__title {
+    margin-bottom: 35px;
+}
+
+.awards__awardTitle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.awards__awardList > p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

@@ -7,10 +7,12 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import CalculateIcon from '@mui/icons-material/Calculate';
 import ComputerIcon from '@mui/icons-material/Computer';
 import StarIcon from '@mui/icons-material/Star';
+import SchoolIcon from '@mui/icons-material/School';
 import { Button } from '@mui/material';
 import TimelineItem from './components/TimelineItem';
 import { collection, doc, getDocs, orderBy, query, where } from 'firebase/firestore';
 import { dbService } from '../../fbase';
+import { Link, useNavigate } from 'react-router-dom';
 
 const tagList = {
     math: {
@@ -21,15 +23,21 @@ const tagList = {
         icon: <ComputerIcon />,
         color: 'lightgreen'
     },
+    degree: {
+        icon: <SchoolIcon />,
+        color: 'orange'
+    },
     other: {
         icon: <StarIcon />,
-        color: 'orange'
+        color: '#FF6F61'
     }
 };
 
 function Home() {
     const [ tag, setTag ] = useState('');
     const [ timeline, setTimeline ] = useState([]);
+
+    const navigate = useNavigate()
 
     const getAchievements = async () => {
         let querySnapshot;
@@ -94,8 +102,16 @@ function Home() {
                         <h2>Hyunjun Lee</h2>
                         <p>Seoul National University ECE</p>
                         <div className='home__profileAccounts'>
-                            <GitHubIcon />
-                            <InstagramIcon />
+                            <Link to='https://github.com/hjl1013'>
+                                <div className='home__profileAccount'>
+                                    <GitHubIcon />
+                                </div>
+                            </Link>
+                            <Link to='https://www.instagram.com/lhyj_eun2/'>
+                                <div className='home__profileAccount'>
+                                    <InstagramIcon />
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -122,15 +138,15 @@ function Home() {
                         <div className={`home__achievementsFilter ${ !tag && 'home__achievementsFilter--active'}`}>
                             <Button onClick={() => setTag('')}>All</Button>
                         </div>
-                        <div className={`home__achievementsFilter ${ tag === 'math' && 'home__achievementsFilter--active'}`}>
-                            <Button onClick={() => setTag('math')}>Math</Button>
-                        </div>
-                        <div className={`home__achievementsFilter ${ tag === 'cs' && 'home__achievementsFilter--active'}`}>
-                            <Button onClick={() => setTag('cs')}>CS</Button>
-                        </div>
-                        <div className={`home__achievementsFilter ${ tag === 'other' && 'home__achievementsFilter--active'}`}>
-                            <Button onClick={() => setTag('other')}>other</Button>
-                        </div>
+                        {
+                            Object.keys(tagList).map(key => {
+                                return (
+                                    <div key={key} className={`home__achievementsFilter ${ tag === key && 'home__achievementsFilter--active'}`}>
+                                        <Button id={key} onClick={e => setTag(e.target.id)}>{key}</Button>
+                                    </div>
+                                )
+                            })
+                        }
                     </div>
                     <div className='home__achievementsTimelineContainer'>
                         <div className='home__achievementsTimeline'>

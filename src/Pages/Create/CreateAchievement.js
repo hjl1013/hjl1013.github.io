@@ -17,6 +17,9 @@ function CreateAchievement() {
             date: new Date(date),
             tag
         });
+        setTitle('');
+        setDate('');
+        setTag('');
         console.log("Document written with ID: ", docRef.id);
     }
 

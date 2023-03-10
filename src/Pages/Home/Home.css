@@ -32,8 +32,13 @@
     align-items: center;
 }
 
-.home__profileAccounts > .MuiSvgIcon-root {
+.home__profileAccount {
+    cursor: pointer;
+}
+
+.home__profileAccount > .MuiSvgIcon-root {
     margin-right: 5px;
+    color: black;
 }
 
 .home__sectionTitle {
@@ -42,7 +47,10 @@
 }
 
 .home__shortIntroduction > p {
-    margin-top: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    text-align: justify;
 }
 
 .home__achievements {
@@ -61,6 +69,11 @@
 
 .home__achievementsFilter > button {
     color: lightgray;
+}
+
+.home__achievementsFilter > button:hover {
+    background-color: #ECECEC;
+    color: black;
 }
 
 .home__achievementsFilter--active > button {
