@@ -7,6 +7,7 @@ import { dbService, storageService } from '../../fbase';
 import { v4 } from "uuid";
 import { addDoc, collection } from 'firebase/firestore';
 import ProjectBody from '../../common/ProjectBody/ProjectBody';
+import { useNavigate } from 'react-router-dom';
 
 function CreateProject() {
     const [ title, setTitle ] = useState('');
@@ -14,6 +15,8 @@ function CreateProject() {
     const [ body, setBody ] = useState('');
     const [ bodySave, setBodySave ] = useState([]);
     const [ bodyImageAttachment, setBodyImageAttachment ] = useState('');
+
+    const navigate = useNavigate();
 
     const onChangeBody = (event) => {
         const bodyTemp = event.target.value;
@@ -69,6 +72,7 @@ function CreateProject() {
             body: bodySave,
         });
         console.log("Document written with ID: ", docRef.id);
+        navigate(`/edit-project/${docRef.id}`);
     }
 
     return (

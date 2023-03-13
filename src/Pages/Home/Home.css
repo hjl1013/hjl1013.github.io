@@ -61,6 +61,7 @@
 .home__achievementsFilters {
     display: flex;
     margin-bottom: 25px;
+    flex-wrap: wrap;
 }
 
 .home__achievementsFilter {
@@ -104,4 +105,121 @@
 
 .home__timelineItem {
     z-index: 1;
+}
+
+@media screen and (max-width: 800px) {
+    .home__sideBar {
+        top: 0px;
+        position: fixed;
+    }
+    
+    .home__body {
+        margin-top: 72px;
+        margin-left: 0px;
+        padding: 50px;
+    }
+    
+    .home__profileInfo {
+        display: flex;
+        align-items: center;
+    }
+    
+    .home__profileImageInfo > img {
+        object-fit: cover;
+        object-position: 0 10%;
+        width: 120px;
+        height: 120px;
+        border-radius: 999px;
+    }
+    
+    .home__profileTextInfo {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-left: 20px;
+    }
+    
+    .home__profileAccounts {
+        display: flex;
+        align-items: center;
+    }
+    
+    .home__profileAccount {
+        cursor: pointer;
+    }
+    
+    .home__profileAccount > .MuiSvgIcon-root {
+        margin-right: 5px;
+        color: black;
+    }
+    
+    .home__sectionTitle {
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    
+    .home__shortIntroduction > p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        line-height: 25px;
+        text-align: justify;
+    }
+    
+    .home__achievements {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .home__achievementsFilters {
+        display: flex;
+        margin-bottom: 25px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .home__achievementsFilter {
+        display: flex;
+        margin-right: 0px;
+        width: 80px;
+        justify-content: center;
+    }
+    
+    .home__achievementsFilter > button {
+        color: lightgray;
+    }
+    
+    .home__achievementsFilter > button:hover {
+        background-color: #ECECEC;
+        color: black;
+    }
+    
+    .home__achievementsFilter--active > button {
+        color: black;
+        background-color: #ECECEC;
+    }
+    
+    .home__achievementsTimelineContainer {
+        height: 500px;
+        overflow: scroll;
+    }
+    
+    .home__achievementsTimeline {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    .home__achievementsTimelineCenterLine {
+        width: 2px;
+        height: 100%;
+        background-color: lightgray;
+        position: absolute;
+        justify-self: center;
+    }
+    
+    .home__timelineItem {
+        z-index: 1;
+    }
 }
