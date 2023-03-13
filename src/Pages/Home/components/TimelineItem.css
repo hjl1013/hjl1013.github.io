@@ -1,9 +1,11 @@
 .timelineItem {
     display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .timelineItem__left {
-    width: 300px;
+    width: 30%;
 }
 
 .timelineItem__icon {
@@ -25,7 +27,7 @@
 }
 
 .timelineItem__right {
-    width: 300px;
+    width: 30%;
 }
 
 .timelineItem__text > p {

@@ -20,3 +20,30 @@
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+@media screen and (max-width: 800px) {
+    .awards__sideBar {
+        position: fixed;
+        top: 0px;
+    }
+    
+    .awards__body {
+        margin-top: 72px;
+        margin-left: 0px;
+        padding: 50px;
+    }
+    
+    .awards__title {
+        margin-bottom: 35px;
+    }
+    
+    .awards__awardTitle {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .awards__award {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }    
+}

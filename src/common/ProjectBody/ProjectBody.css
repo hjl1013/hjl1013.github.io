@@ -22,3 +22,30 @@
     line-height: 30px;
     text-align: justify;
 }
+
+@media screen and (max-width: 800px) {
+    .projectBody__contentPreviewTitle {
+        margin-bottom: 35px;
+    }
+    
+    .projectBody__contentParagraph {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .projectBody__contentParagraph > img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 5px 5px 8px -9px rgba(0, 0, 0, 0.75);
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .projectBody__contentParagraph > p {
+        width: 100%;
+        line-height: 30px;
+        text-align: justify;
+    }
+}

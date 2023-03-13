@@ -105,6 +105,7 @@
 
 .home__timelineItem {
     z-index: 1;
+    width: 100%;
 }
 
 @media screen and (max-width: 800px) {
