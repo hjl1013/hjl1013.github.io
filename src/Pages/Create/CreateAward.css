@@ -1,8 +1,22 @@
 .createAward__sideBar {
     position: fixed;
+    z-index: 2;
 }
 
 .createAward__body {
     margin-left: 201px;
     padding: 50px;
+}
+
+@media screen and (max-width: 800px) {
+    .createAward__sideBar {
+        position: fixed;
+        top: 0px;
+    }
+    
+    .createAward__body {
+        margin-top: 72px;
+        margin-left: 0px;
+        padding: 50px;
+    }
 }

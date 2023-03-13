@@ -26,3 +26,36 @@
 .createProject__imagePreview > img {
     width: 300px;
 }
+
+@media screen and (max-width: 800px) {
+    .createProject__sideBar {
+        position: fixed;
+        top: 0;
+    }
+    
+    .createProject__body {
+        margin-top: 72px;
+        margin-left: 0px;
+        padding: 50px;
+    }
+    
+    .createProject__contentTitleImage {
+        flex-direction: column;
+    }
+    
+    .createProject__contentTitleImage > img {
+        width: 300px;
+    }
+    
+    .createProject__contentTags {
+        display: flex;
+    }
+    
+    .createProject__contentTagButton--active > button {
+        background-color: black;
+    }
+    
+    .createProject__imagePreview > img {
+        width: 300px;
+    }
+}

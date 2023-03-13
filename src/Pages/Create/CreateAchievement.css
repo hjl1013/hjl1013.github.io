@@ -1,8 +1,22 @@
 .createAchievement__sideBar {
     position: fixed;
+    z-index: 2;
 }
 
 .createAchievement__body {
     margin-left: 201px;
     padding: 50px;
+}
+
+@media screen and (max-width: 800px) {
+    .createAchievement__sideBar {
+        position: fixed;
+        top: 0px;
+    }
+    
+    .createAchievement__body {
+        margin-top: 72px;
+        margin-left: 0px;
+        padding: 50px;
+    }
 }
