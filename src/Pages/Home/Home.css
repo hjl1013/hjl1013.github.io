@@ -1,5 +1,6 @@
 .home__sideBar {
     position: fixed;
+    z-index: 2;
 }
 
 .home__body {

@@ -1,5 +1,6 @@
 .awards__sideBar {
     position: fixed;
+    z-index: 2;
 }
 
 .awards__body {
