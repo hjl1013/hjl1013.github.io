@@ -9,6 +9,7 @@ import ComputerIcon from '@mui/icons-material/Computer';
 import StarIcon from '@mui/icons-material/Star';
 import SchoolIcon from '@mui/icons-material/School';
 import ScienceIcon from '@mui/icons-material/Science';
+import ArticleIcon from '@mui/icons-material/Article';
 import { Button } from '@mui/material';
 import TimelineItem from './components/TimelineItem';
 import { collection, getDocs, orderBy, query, where } from 'firebase/firestore';
@@ -113,6 +114,11 @@ function Home() {
                             <Link to='https://www.instagram.com/lhyj_eun2/'>
                                 <div className='home__profileAccount'>
                                     <InstagramIcon />
+                                </div>
+                            </Link>
+                            <Link to={process.env.PUBLIC_URL + '/CV.pdf'}>
+                                <div className='home__profileAccount'>
+                                    <ArticleIcon />
                                 </div>
                             </Link>
                         </div>
