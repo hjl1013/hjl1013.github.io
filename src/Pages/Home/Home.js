@@ -116,7 +116,7 @@ function Home() {
                                     <InstagramIcon />
                                 </div>
                             </Link>
-                            <Link to={process.env.PUBLIC_URL + '/CV.pdf'}>
+                            <Link to='https://drive.google.com/file/d/1_ypnzFOpc_w_1RqQCMKHCRJegtgeUs2q/view?usp=sharing'>
                                 <div className='home__profileAccount'>
                                     <ArticleIcon />
                                 </div>
