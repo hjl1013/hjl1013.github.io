@@ -131,10 +131,10 @@ function Home() {
 
                 <div className='home__shortIntroduction'>
                     <p>
-                        Hi, my name is Hyunjun Lee and I am a junior at Seoul National University.
+                        Hi, my name is Hyunjun Lee and I am a junior at Seoul National University. I am currently an Undergraduate intern in Cognitive Learning for Vision and Robotics Lab at KAIST under professor Joseph Lim.
                     </p>
                     <p>
-                        I love studying math, computer science, and electronics. I spend most of my time these days studying computer science, especially AI and Web/App developments.
+                        I aim to explore ways in which AI can more accurately replicate complex aspects of human behavior and develop a product that efficiently utilzes technology.
                     </p>
                 </div>
 
