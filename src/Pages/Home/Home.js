@@ -139,6 +139,16 @@ function Home() {
                 </div>
 
                 <div className='home__sectionTitle'>
+                    <h2>News</h2>
+                </div>
+
+                <div className='home__news'>
+                    <p>
+                        [Feb 2025] Our Paper "SyncSDE: A Probabilistic Framework for Diffusion Synchronization" is accepted by CVPR 2025!
+                    </p>
+                </div>
+
+                <div className='home__sectionTitle'>
                     <h2>Timeline</h2>
                 </div>
 
