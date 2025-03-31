@@ -54,6 +54,13 @@
     text-align: justify;
 }
 
+.home__news {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    text-align: justify;
+}
+
 .home__achievements {
     display: flex;
     flex-direction: column;
@@ -161,6 +168,13 @@
     }
     
     .home__shortIntroduction > p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        line-height: 25px;
+        text-align: justify;
+    }
+
+    .home__news {
         margin-top: 20px;
         margin-bottom: 20px;
         line-height: 25px;
