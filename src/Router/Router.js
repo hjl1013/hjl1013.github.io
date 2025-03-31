@@ -1,5 +1,5 @@
 import React from 'react'
-import { HashRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Awards from '../Pages/Awards/Awards'
 import CreateAchievement from '../Pages/Create/CreateAchievement'
 import CreateAward from '../Pages/Create/CreateAward'
@@ -11,7 +11,7 @@ import Projects from '../Pages/Projects/Projects'
 
 function AppRouter() {
     return (
-        <HashRouter>
+        <BrowserRouter>
             <Routes>
                 {/* main routes */}
                 <Route path='/' element={<Home />} />
@@ -25,7 +25,7 @@ function AppRouter() {
                 <Route path='/create-award' element={<CreateAward />} />
                 <Route path='/edit-project/:projectId' element={<EditProject />} />
             </Routes>
-        </HashRouter>
+        </BrowserRouter>
     )
 }
 

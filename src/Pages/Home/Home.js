@@ -149,7 +149,7 @@ function Home() {
 
                 <div className='home__news'>
                     <p>
-                        [Feb 2025] Our Paper "SyncSDE: A Probabilistic Framework for Diffusion Synchronization" is accepted by CVPR 2025! Congrats to my co-authors Hyunsoo Lee and Sookwan Han.
+                        [Feb 2025] Our Paper "SyncSDE: A Probabilistic Framework for Diffusion Synchronization" is accepted in CVPR 2025! Congrats to my co-authors Hyunsoo Lee and Sookwan Han.
                     </p>
                 </div>
 
