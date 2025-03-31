@@ -106,6 +106,11 @@ function Home() {
                         <h2>Hyunjun Lee</h2>
                         <p>Seoul National University ECE</p>
                         <div className='home__profileAccounts'>
+                            <Link to='https://scholar.google.com/citations?hl=ko&user=SVFe8ZYAAAAJ'>
+                                <div className='home__profileAccount'>
+                                    <SchoolIcon />
+                                </div>
+                            </Link>
                             <Link to='https://github.com/hjl1013'>
                                 <div className='home__profileAccount'>
                                     <GitHubIcon />
