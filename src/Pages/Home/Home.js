@@ -153,6 +153,25 @@ function Home() {
                     </p>
                 </div>
 
+                {/* <div className='home__sectionTitle'>
+                    <h2>Publications</h2>
+                </div>
+
+                <div className='home__publications'>
+                    <div className='home__publication'>
+                        <img src='/figures/syncsde.jpg' alt='' />
+                        <div className='home__publicationText'>
+                            <p className='home__publicationTitle'>SyncSDE: A Probabilistic Framework for Diffusion Synchronization</p>
+                            <p className='home__publicationAuthor'>
+                                <b>Hyunjun Lee</b>, Hyunsoo Lee, and Sookwan Han
+                            </p>
+                            <p className='home__publicationConference'>
+                                <b>CVPR 2025</b>
+                            </p>
+                        </div>
+                    </div>
+                </div> */}
+
                 <div className='home__sectionTitle'>
                     <h2>Timeline</h2>
                 </div>

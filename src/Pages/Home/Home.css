@@ -61,6 +61,37 @@
     text-align: justify;
 }
 
+.home__publication {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.home__publication > img {
+    width: 400px;
+    object-fit: cover;
+}
+
+.home__publicationText {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.home__publicationTitle {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.home__publicationAuthor {
+    font-size: 15px;
+}
+
+.home__publicationConference {
+    font-size: 20px;
+}
+
+
 .home__achievements {
     display: flex;
     flex-direction: column;
