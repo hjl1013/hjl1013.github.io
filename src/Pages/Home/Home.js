@@ -126,7 +126,10 @@ function Home() {
                         Hi, my name is Hyunjun Lee and I am a junior at Seoul National University. I am currently an Undergraduate intern in Cognitive Learning for Vision and Robotics Lab at KAIST under professor Joseph Lim.
                     </p>
                     <p>
-                        My ultimate goal is to make my own research lab that enables curiosity-driven exploration across diverse fields. I want to replicate the spirit of Bell Lab while ensuring long-term sustainability.
+                        My main research interest lies in self-improvement and automation in learning. I want to AI to autonomously learn and acquire skills. Building on this, I am also interested in multi-agent learning that enables complex collaboration among robots. Ultimately, I believe individual robots should become cheaper and the number of robots should scale.
+                    </p>
+                    <p>
+                        Eventually, I want to make my own research lab that enables curiosity-driven exploration across diverse fields. I want to replicate the spirit of Bell Lab while ensuring long-term sustainability.
                     </p>
                 </div>
 
