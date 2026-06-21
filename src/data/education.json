@@ -1,0 +1,32 @@
+[
+    {
+        "date": "2021-03",
+        "school": "Seoul National University",
+        "timelineText": "Entered Seoul National University",
+        "degree": "B.S. in Electrical and Computer Engineering, Mathematical Science",
+        "period": "Mar 2021 – Present",
+        "details": [
+            "Current GPA: 4.09 / 4.3"
+        ]
+    },
+    {
+        "date": "2018-03",
+        "school": "Seoul Science High School",
+        "timelineText": "Entered Seoul Science High School",
+        "degree": "30th year",
+        "period": "Mar 2018 – Feb 2021",
+        "details": []
+    },
+    {
+        "school": "Presidential Science Scholarship",
+        "degree": "19th year",
+        "period": "",
+        "details": []
+    },
+    {
+        "school": "SNU Semiconductor Specialty College Scholarship",
+        "degree": "1st year",
+        "period": "",
+        "details": []
+    }
+]

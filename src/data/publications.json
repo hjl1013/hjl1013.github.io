@@ -1,0 +1,20 @@
+[
+    {
+        "date": "2026-03",
+        "image": "/publications/n2m.gif",
+        "title": "N2M: Bridging Navigation and Manipulation by Learning Pose Preference from Rollout",
+        "timelineText": "N2M accepted to ICML 2026",
+        "authors": "Kaixin Chai*, Hyunjun Lee*, and Joseph J. Lim",
+        "venue": "ICML 2026",
+        "link": "https://clvrai.github.io/N2M/"
+    },
+    {
+        "date": "2025-02",
+        "image": "/publications/syncsde.jpg",
+        "title": "SyncSDE: A Probabilistic Framework for Diffusion Synchronization",
+        "timelineText": "SyncSDE accepted to CVPR 2025",
+        "authors": "Hyunjun Lee*, Hyunsoo Lee*, and Sookwan Han",
+        "venue": "CVPR 2025",
+        "link": "https://hjl1013.github.io/SyncSDE/"
+    }
+]

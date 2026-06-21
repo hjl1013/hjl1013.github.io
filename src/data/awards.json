@@ -1,0 +1,23 @@
+[
+    {
+        "theme": "Math",
+        "awards": [
+            { "date": "2025-12", "title": "Simon Marais Mathematics Competition (SMMC) — 10th place out of 643 participants (East Division)", "timelineText": "Simon Marais Mathematics Competition — 10th place out of 643 (East Division)" },
+            { "date": "2025-11", "title": "Korean Undergraduate Math Contest — Gold Prize (Math Majors section)", "timelineText": "Korean Undergraduate Math Contest — Gold Prize (Math Majors)" },
+            { "date": "2024-11", "title": "Korean Undergraduate Math Contest — Gold Prize (Math Majors section)", "timelineText": "Korean Undergraduate Math Contest — Gold Prize (Math Majors)" },
+            { "date": "2021-11", "title": "Korean Undergraduate Math Contest — 1st place (Non-Math Majors section)", "timelineText": "Korean Undergraduate Math Contest — 1st place (Non-Math Majors)" },
+            { "date": "2020-04", "title": "Finalist, Korean National IMO Team — Top 13" },
+            { "date": "2019-04", "title": "Finalist, Korean National IMO Team — Top 16" }
+        ]
+    },
+    {
+        "theme": "CS",
+        "awards": [
+            { "date": "2024-06", "title": "K-Startup Challenge — 1st place (Airforce-level), 10th place (Military-level)" },
+            { "date": "2023-01", "title": "Hyundai / LikeLion SW Hackathon — 5th place" },
+            { "date": "2022-11", "title": "Deep Learning based Unmanned Product Recognition Competition — 1st place" },
+            { "date": "2022-08", "title": "SNU FastMRI Challenge — 1st place" },
+            { "date": "2021-12", "title": "Data Centric University 4.0 Big Data Idea Development Contest — 3rd place" }
+        ]
+    }
+]

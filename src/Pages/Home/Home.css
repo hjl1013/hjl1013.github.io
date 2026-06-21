@@ -1,129 +1,403 @@
-.home__sideBar {
-    position: fixed;
-    z-index: 2;
+.home {
+    display: flex;
+    justify-content: center;
 }
 
 .home__body {
-    margin-left: 201px;
-    padding: 50px;
+    width: 100%;
+    max-width: 1000px;
+    padding: 80px 32px 96px;
 }
 
+/* Profile card */
 .home__profileInfo {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 40px 32px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
 }
 
 .home__profileImageInfo > img {
     object-fit: cover;
     object-position: 0 10%;
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     border-radius: 999px;
+    box-shadow: 0 0 0 4px var(--surface), 0 0 0 6px var(--accent-soft);
 }
 
 .home__profileTextInfo {
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    margin-left: 20px;
+    align-items: center;
+    gap: 6px;
+}
+
+.home__profileTextInfo > h2 {
+    font-size: 1.9rem;
+    font-weight: 700;
+}
+
+.home__profileTextInfo > p {
+    color: var(--text-muted);
+    font-size: 1rem;
 }
 
 .home__profileAccounts {
     display: flex;
     align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 .home__profileAccount {
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    background-color: var(--surface-alt);
+    color: var(--text-muted);
+    transition: background-color 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.home__profileAccount:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px);
 }
 
 .home__profileAccount > .MuiSvgIcon-root {
-    margin-right: 5px;
-    color: black;
+    color: var(--text-muted);
+    font-size: 1.3rem;
+    transition: color 160ms ease;
 }
 
+.home__profileAccount:hover > .MuiSvgIcon-root {
+    color: #fff;
+}
+
+/* Section titles */
 .home__sectionTitle {
-    margin-top: 35px;
-    margin-bottom: 35px;
+    margin-top: 56px;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.home__sectionTitle > h2 {
+    text-align: center;
+}
+
+.home__sectionTitleIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background-color: var(--accent-soft);
+    color: var(--accent);
+}
+
+.home__sectionTitleIcon > .MuiSvgIcon-root {
+    color: var(--accent);
+    font-size: 1.25rem;
+}
+
+/* Intro + News */
+.home__shortIntroduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
 }
 
 .home__shortIntroduction > p {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    line-height: 30px;
+    line-height: 1.8;
     text-align: justify;
+    color: var(--text);
+    max-width: 1000px;
 }
 
 .home__news {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    line-height: 30px;
+    padding: 20px 24px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
     text-align: justify;
-}
-
-.home__publication {
-    display: flex;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.home__publication > img {
-    width: 400px;
-    object-fit: cover;
-}
-
-.home__publicationText {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+.home__news > p {
+    line-height: 1.75;
+    color: var(--text);
+    text-align: justify;
+}
+
+/* Publications */
+.home__publications {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home__publication {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 22px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 200ms ease, transform 200ms ease;
+}
+
+.home__publication:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-3px);
+}
+
+.home__publicationMedia {
+    flex-shrink: 0;
+    width: 280px;
+    aspect-ratio: 16 / 10;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+    background-color: var(--surface-alt);
+    border: 1px solid var(--border);
+}
+
+.home__publicationMedia > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.home__publicationPlaceholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--surface-alt), #ececf6);
+    border: 1px dashed var(--border-strong);
+    border-radius: var(--radius-sm);
+    color: var(--text-faint);
+}
+
+.home__publicationPlaceholder > .MuiSvgIcon-root {
+    font-size: 2rem;
+}
+
+.home__publicationPlaceholder > span {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+}
+
+.home__publicationText {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 8px;
+}
+
 .home__publicationTitle {
-    font-size: 30px;
+    font-size: 1.25rem;
     font-weight: 600;
+    font-family: var(--font-display);
+    line-height: 1.35;
 }
 
 .home__publicationAuthor {
-    font-size: 15px;
+    font-size: 0.95rem;
+    color: var(--text-muted);
 }
 
 .home__publicationConference {
-    font-size: 20px;
+    margin-top: 2px;
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background-color: var(--accent-soft);
+    color: var(--accent);
+    font-size: 0.85rem;
+    font-weight: 600;
 }
 
+/* Education */
+.home__education {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
+.home__educationItem {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 22px 26px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.home__educationHeader {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.home__educationSchool {
+    margin: 0;
+    font-size: 1.15rem;
+}
+
+.home__educationPeriod {
+    flex-shrink: 0;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    font-weight: 500;
+}
+
+.home__educationDegree {
+    color: var(--text);
+    line-height: 1.5;
+}
+
+.home__educationDetails {
+    margin: 4px 0 0;
+    padding-left: 18px;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.home__educationDetails > li::marker {
+    color: var(--accent);
+}
+
+/* Awards */
+.home__awards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home__awardSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 26px 30px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.home__awardSectionTitle {
+    color: var(--accent);
+    margin: 0 0 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.home__award {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding: 8px 4px;
+}
+
+.home__awardYear {
+    flex-shrink: 0;
+    width: 46px;
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 0.92rem;
+}
+
+.home__award > p {
+    line-height: 1.55;
+    color: var(--text);
+}
+
+/* Timeline */
 .home__achievements {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .home__achievementsFilters {
     display: flex;
-    margin-bottom: 25px;
+    gap: 8px;
+    margin-bottom: 28px;
     flex-wrap: wrap;
-}
-
-.home__achievementsFilter {
-    margin-right: 10px;
+    justify-content: center;
 }
 
 .home__achievementsFilter > button {
-    color: lightgray;
+    color: var(--text-muted);
+    border-radius: 999px;
+    padding: 6px 18px;
+    text-transform: none;
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: 0.9rem;
+    letter-spacing: 0;
+    transition: background-color 160ms ease, color 160ms ease;
 }
 
 .home__achievementsFilter > button:hover {
-    background-color: #ECECEC;
-    color: black;
+    background-color: var(--surface-alt);
+    color: var(--text);
 }
 
 .home__achievementsFilter--active > button {
-    color: black;
-    background-color: #ECECEC;
+    color: #fff;
+    background-color: var(--accent);
+}
+
+.home__achievementsFilter--active > button:hover {
+    background-color: var(--accent-hover);
+    color: #fff;
 }
 
 .home__achievementsTimelineContainer {
-    height: 500px;
-    overflow: scroll;
+    width: 100%;
+    height: 520px;
+    overflow-y: auto;
+    padding: 24px 8px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
 }
 
 .home__achievementsTimeline {
@@ -137,7 +411,7 @@
 .home__achievementsTimelineCenterLine {
     width: 2px;
     height: 100%;
-    background-color: lightgray;
+    background: linear-gradient(180deg, transparent, var(--border-strong) 8%, var(--border-strong) 92%, transparent);
     position: absolute;
     justify-self: center;
 }
@@ -148,125 +422,48 @@
 }
 
 @media screen and (max-width: 800px) {
-    .home__sideBar {
-        top: 0px;
-        position: fixed;
-    }
-    
     .home__body {
-        margin-top: 72px;
-        margin-left: 0px;
-        padding: 50px;
-    }
-    
-    .home__profileInfo {
-        display: flex;
-        align-items: center;
-    }
-    
-    .home__profileImageInfo > img {
-        object-fit: cover;
-        object-position: 0 10%;
-        width: 120px;
-        height: 120px;
-        border-radius: 999px;
-    }
-    
-    .home__profileTextInfo {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin-left: 20px;
-    }
-    
-    .home__profileAccounts {
-        display: flex;
-        align-items: center;
-    }
-    
-    .home__profileAccount {
-        cursor: pointer;
-    }
-    
-    .home__profileAccount > .MuiSvgIcon-root {
-        margin-right: 5px;
-        color: black;
-    }
-    
-    .home__sectionTitle {
-        margin-top: 35px;
-        margin-bottom: 35px;
-    }
-    
-    .home__shortIntroduction > p {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        line-height: 25px;
-        text-align: justify;
+        padding: 48px 22px 72px;
     }
 
-    .home__news {
-        margin-top: 20px;
+    .home__profileInfo {
+        padding: 32px 22px;
+    }
+
+    .home__profileImageInfo > img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .home__profileTextInfo > h2 {
+        font-size: 1.5rem;
+    }
+
+    .home__sectionTitle {
+        margin-top: 44px;
         margin-bottom: 20px;
-        line-height: 25px;
-        text-align: justify;
     }
-    
-    .home__achievements {
-        display: flex;
+
+    .home__publication {
         flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
     }
-    
-    .home__achievementsFilters {
-        display: flex;
-        margin-bottom: 25px;
-        flex-wrap: wrap;
-        justify-content: space-between;
+
+    .home__publicationMedia {
+        width: 100%;
     }
-    
-    .home__achievementsFilter {
-        display: flex;
-        margin-right: 0px;
-        width: 80px;
-        justify-content: center;
+
+    .home__publicationText {
+        align-items: center;
+        text-align: center;
     }
-    
-    .home__achievementsFilter > button {
-        color: lightgray;
+
+    .home__awardSection {
+        padding: 22px 20px;
     }
-    
-    .home__achievementsFilter > button:hover {
-        background-color: #ECECEC;
-        color: black;
-    }
-    
-    .home__achievementsFilter--active > button {
-        color: black;
-        background-color: #ECECEC;
-    }
-    
+
     .home__achievementsTimelineContainer {
         height: 500px;
-        overflow: scroll;
-    }
-    
-    .home__achievementsTimeline {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-    }
-    
-    .home__achievementsTimelineCenterLine {
-        width: 2px;
-        height: 100%;
-        background-color: lightgray;
-        position: absolute;
-        justify-self: center;
-    }
-    
-    .home__timelineItem {
-        z-index: 1;
     }
 }
