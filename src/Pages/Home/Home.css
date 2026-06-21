@@ -87,7 +87,7 @@
 
 /* Section titles */
 .home__sectionTitle {
-    margin-top: 56px;
+    margin-top: 76px;
     margin-bottom: 24px;
     display: flex;
     align-items: center;
@@ -440,7 +440,7 @@
     }
 
     .home__sectionTitle {
-        margin-top: 44px;
+        margin-top: 60px;
         margin-bottom: 20px;
     }
 
